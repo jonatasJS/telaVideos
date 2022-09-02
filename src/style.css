@@ -1,0 +1,43 @@
+html,
+body,
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+}
+
+.titulo-principal {
+  display: none;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  color: #fff;
+}
+
+.titulo-principal:after {
+  content: '|';
+  opacity: 1;
+  animation: pisca .7s infinite;
+}
+
+.titulo-principal.active {
+  display: block;
+}
+
+/* Animação aplicada ao content referente a classe *.titulo-principal* resultando num efeito de cursor piscando. */
+
+@keyframes pisca {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
